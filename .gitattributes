@@ -1,0 +1,20 @@
+# Автоматическое определение текстовых файлов
+* text=auto
+
+# Файлы Go
+*.go text eol=lf linguist-language=Go
+
+# Модули Go
+go.mod text eol=lf
+go.sum text eol=lf
+
+# Конец строк для скриптов
+*.sh text eol=lf
+
+# Игнорировать при экспорте (git archive)
+vendor/ export-ignore
+tests/ export-ignore
+examples/ export-ignore
+
+# Для нормализации окончаний строк в Windows
+*.go text=auto eol=lf
