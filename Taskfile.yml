@@ -1,0 +1,11 @@
+# https://taskfile.dev
+
+version: '3'
+
+tasks:
+  cli-BR:
+    cmds:
+      - mkdir -p ./bin
+      - go build -o ./bin/cli ./cmd/main.go
+      - ./bin/cli
+    silent: false
