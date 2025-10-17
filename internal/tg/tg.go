@@ -1,11 +1,19 @@
 package tg
 
-import "fmt"
+import (
+	"fmt"
+	"regexp"
+)
 
-func Init(api_key string) {
-	if api_key == "" {
-		fmt.Println("Error: API key is empty.")
-		return
+func Init(api_key string) error {
+	if !isValidTelegramAPIKey(api_key) {
+		return fmt.Errorf("invalid API key")
 	}
 	fmt.Println("Telegram bot init successfully!")
+	return nil
+}
+
+func isValidTelegramAPIKey(api_key string) bool {
+	match, _ := regexp.MatchString(`^\d+:[A-Za-z0-9_-]+$`, api_key)
+	return match
 }
