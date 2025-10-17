@@ -2,12 +2,10 @@
 
 version: '3'
 
-vars:
-  GREETING: Hello, World!
-
 tasks:
   cli-BR:
     cmds:
+      - mkdir -p ./bin
       - go build -o ./bin/cli ./cmd/main.go
       - ./bin/cli
     silent: false
