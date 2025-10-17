@@ -7,5 +7,5 @@ func Init(api_key string) {
 		fmt.Println("Error: API key is empty.")
 		return
 	}
-	fmt.Println("Telegram bot init succesfully!")
+	fmt.Println("Telegram bot init successfully!")
 }

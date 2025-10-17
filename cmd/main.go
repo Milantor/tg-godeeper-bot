@@ -24,8 +24,12 @@ func main() {
 	tg.Init(tg_api_key)
 
 	deepseek_api_key := os.Getenv("DEEPSEEK_API_KEY")
-	if tg_api_key == "" {
+	if deepseek_api_key == "" {
 		fmt.Println("Error: DEEPSEEK_API_KEY environment variable is not set.")
+		return
+	}
+	if len(deepseek_api_key) < 10 {
+		fmt.Println("Error: DEEPSEEK_API_KEY environment variable is not valid")
 		return
 	}
 	ai.Init(deepseek_api_key)

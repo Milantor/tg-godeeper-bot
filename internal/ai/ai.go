@@ -7,5 +7,5 @@ func Init(api_key string) {
 		fmt.Println("Error: API key is empty.")
 		return
 	}
-	fmt.Println("AI chat init succesfully!")
+	fmt.Println("AI chat init successfully!")
 }
